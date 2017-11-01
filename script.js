@@ -7,11 +7,16 @@ function move() {
   if (this.querySelector('span') == null) {
     // user move
     this.insertAdjacentHTML("afterBegin", "<span class=\"cross\"></span");
-    checkWin();
-    //computer move
-    var compMove = findEmptyField();
-    compMove.insertAdjacentHTML("afterBegin", "<span class=\"nought\"></span");
-    checkWin();
+    if (checkWin() == true) {
+      alert("Game over");
+    } else {
+      //computer move
+      var compMove = findEmptyField();
+      compMove.insertAdjacentHTML("afterBegin", "<span class=\"nought\"></span");
+      if (checkWin() == true) {
+        alert("Game over");
+      }
+    }
   }
 }
 
@@ -35,7 +40,11 @@ function checkWin() {
     document.querySelectorAll('td:nth-child(2) span.cross').length == 3 ||
     document.querySelectorAll('td:nth-child(2) span.nought').length == 3 ||
     document.querySelectorAll('td:last-child span.cross').length == 3 ||
-    document.querySelectorAll('td:last-child span.nought').length == 3) {
-    alert("Game over");
+    document.querySelectorAll('td:last-child span.nought').length == 3 ||
+    document.querySelectorAll('tr:nth-child(1) td:nth-child(1) span.cross, tr:nth-child(2) td:nth-child(2) span.cross, tr:nth-child(3) td:nth-child(3) span.cross').length == 3 ||
+    document.querySelectorAll('tr:nth-child(1) td:nth-child(1) span.nought, tr:nth-child(2) td:nth-child(2) span.nought, tr:nth-child(3) td:nth-child(3) span.nought').length == 3 ||
+    document.querySelectorAll('tr:nth-child(3) td:nth-child(1) span.cross, tr:nth-child(2) td:nth-child(2) span.cross, tr:nth-child(1) td:nth-child(3) span.cross').length == 3 ||
+    document.querySelectorAll('tr:nth-child(3) td:nth-child(1) span.nought, tr:nth-child(2) td:nth-child(2) span.nought, tr:nth-child(1) td:nth-child(3) span.nought').length == 3) {
+    return true;
   }
 }
