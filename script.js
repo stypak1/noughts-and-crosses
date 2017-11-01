@@ -21,10 +21,11 @@ function move() {
 }
 
 function findEmptyField() {
-  for (var j = 0; j < gameFields.length; j++) {
-    if (gameFields[j].querySelector('span') == null) {
-      return gameFields[j];
-    }
+  var randomField = gameFields[Math.floor(Math.random() * gameFields.length)];
+  if (randomField.querySelector('span') == null){
+      return randomField;
+  } else {
+      findEmptyField();
   }
 }
 
