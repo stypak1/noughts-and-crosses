@@ -1,0 +1,35 @@
+.field-wrapper {
+  margin: 3% auto 5%;
+  width: 100%;
+  max-width: 300px;
+  font-size: 0;
+  border: 1px solid #000;
+}
+
+.cell {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100px;
+  border: 1px solid #000;
+  height: 100px;
+  vertical-align: middle;
+  font: 40px/100px sans-serif;
+  text-align: center;
+}
+
+.wins-counter {
+  margin: 0 auto;
+  width: auto;
+}
+
+p {
+  text-align: center;
+  font: 30px sans-serif;
+  margin: 10px 0;
+}
+
+.wins-message{
+  height: 100px;
+  text-align: center;
+  font: 30px/100px sans-serif;
+}
