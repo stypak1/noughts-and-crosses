@@ -57,41 +57,42 @@
       border-radius: 50%;
     }
 
-    p {
-      text-align: center;
-      font: 16px Arial, sans-serif;
-    }
-  </style>
+    p<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" charset="utf-8"></script>
   <title>Document</title>
 </head>
 
 <body>
-  <table>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
-  <div>
+  <div class="wins-message"></div>
+  <div class="field-wrapper">
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+  </div>
+  <div class="wins-counter">
     <p>
-      Crosses wins: <span class="cross-wins">0</span>
+      Human wins: <span class="human-wins">0</span>
     </p>
     <p>
-      Noughts wins: <span class="nought-wins">0</span>
+      AI wins: <span class="ai-wins">0</span>
+    </p>
+    <p>
+      Draws: <span class="draws">0</span>
     </p>
   </div>
-  <script src="./script.js"></script>
 </body>
 
 </html>
